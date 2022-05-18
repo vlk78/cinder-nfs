@@ -1,0 +1,17 @@
+- project:
+    templates:
+      - charm-unit-jobs-py38
+      - charm-unit-jobs-py39
+      - charm-ussuri-functional-jobs
+      - charm-stein-functional-jobs
+    check:
+      jobs:
+        - focal-ussuri
+        - bionic-ussuri:
+            voting: false
+        - bionic-stein:
+            voting: false
+    vars:
+      needs_charm_build: true
+      charm_build_name: cinder-nfs
+      build_type: charmcraft

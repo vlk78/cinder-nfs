@@ -1,0 +1,13 @@
+charm_name: cinder-nfs
+tests:
+  - zaza.openstack.charm_tests.cinder_nfs.tests.CinderNFSTest
+configure:
+  - zaza.openstack.charm_tests.keystone.setup.add_demo_user
+gate_bundles:
+  - focal-ussuri
+smoke_bundles:
+  - focal-ussuri
+dev_bundles:
+  - focal-ussuri
+  - bionic-ussuri
+  - bionic-stein

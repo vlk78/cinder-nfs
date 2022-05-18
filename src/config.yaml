@@ -1,0 +1,21 @@
+"options":
+  "volume-backend-name":
+    "type": "string"
+    "default": "cinder-nfs"
+    "description": "Service name to present to Cinder"
+  "nfs-server-hostname":
+    "type": "string"
+    "default": !!null ""
+    "description": |
+      The hostname (or IP address) for the storage system
+  "nfs-shares-config":
+    "type": "string"
+    "default": !!null "/etc/cinder/nfs_shares"
+    "description": |
+      The file referenced by this configuration option should contain a
+      list of NFS shares, each on their own line, to which the driver
+      should attempt to provision new Cinder volumes into.
+  "nfs-mount-point-base":
+    "type": "string"
+    "default": !!null "/mnt"
+    "description": "Base dir containing mount points for NFS shares."
